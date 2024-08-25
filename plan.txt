@@ -1,0 +1,35 @@
+notepad
+
+The user can go to this website/app and leave notes, however long, title them and insert images into the notes(maybe). The ntoes are saved adn there will be a seperate page wehre thee ntoes can be sorted by creation date and name, maybe by how recently they were opened. The first page will be like a text field, and have a submit button underneath 
+
+
+                        Database -> Note(content, timeCreated, title, timeEdited, imageScr)
+
+                        API ->
+                            /getAllNotes (sort by time of creation)
+                            /postNote (given a note object, add it to db)
+                            /deleteNote (given the id of the note, delete it)
+                            /updateNote (given the id of the note and the new note object, update it)
+
+                        React ->
+
+                        Router
+                            /notes
+                                -> Notes.js
+                                create the state and make the default state contain several notes objects
+                                    maps an array of object (from the state)
+                                        -> to Note.js
+
+                            /notesForm
+                                -> NotesForm.js
+                                has a default state and adds a note from the form on submit to the state.
+
+
+const note = {
+    title: "Title 1",
+    content: "Amazing trip to Japan",
+    timeCreated: DateTime(),
+    timeEdited: NaN / DateTime(),
+    imageScr: ""
+
+}
